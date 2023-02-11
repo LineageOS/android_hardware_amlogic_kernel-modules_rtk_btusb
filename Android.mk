@@ -35,7 +35,7 @@ RTKBTUSB_ABSOLUTE := $(abspath $(_rtkbtusb_intermediates))
 $(_rtkbtusb_ko): $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/$(BOARD_KERNEL_IMAGE_NAME)
 	@mkdir -p $(dir $@)
 	@cp -R $(RTKBTUSB_PATH)/* $(_rtkbtusb_intermediates)/
-	$(hide) +$(KERNEL_MAKE_CMD) $(PATH_OVERRIDE) $(KERNEL_MAKE_FLAGS) -C $(KERNEL_OUT) M=$(abspath $(_rtkbtusb_intermediates)) ARCH=$(TARGET_KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(RTKBTUSB_CONFIGS) modules
+	$(PATH_OVERRIDE) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(KERNEL_OUT) M=$(abspath $(_rtkbtusb_intermediates)) ARCH=$(TARGET_KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(RTKBTUSB_CONFIGS) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) modules
 	$(KERNEL_TOOLCHAIN_PATH)strip --strip-unneeded $@;
 
 include $(BUILD_SYSTEM)/base_rules.mk
