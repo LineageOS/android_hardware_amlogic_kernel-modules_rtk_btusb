@@ -1,1 +1,12 @@
+CONFIG_BT_RTKBTUSB=m
+
 obj-$(CONFIG_BT_RTKBTUSB)	+= rtk_btusb.o
+
+all:
+	@$(MAKE) -C $(KERNEL_SRC) M=$(M) modules
+
+modules_install:
+	@$(MAKE) INSTALL_MOD_STRIP=1 M=$(M) -C $(KERNEL_SRC) modules_install
+
+clean:
+	$(MAKE) -C $(KERNEL_SRC) M=$(M) clean
