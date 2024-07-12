@@ -2,6 +2,8 @@
 # Makefile for the Linux Bluetooth HCI device drivers.
 #
 
+CONFIG_BT_RTKBTUSB=m
+
 obj-$(CONFIG_BT_HCISMD)		+= hci_smd.o
 obj-$(CONFIG_BT_HCIVHCI)	+= hci_vhci.o
 obj-$(CONFIG_BT_HCIUART)	+= hci_uart.o
@@ -35,3 +37,12 @@ hci_uart-objs				:= $(hci_uart-y)
 obj-$(CONFIG_BT_MSM_SLEEP)              += msm_bt_sleep.o
 msm_bt_sleep-objs                       := bluesleep.o
 obj-$(CONFIG_MSM_BT_POWER)		+= bluetooth-power.o
+
+all:
+	@$(MAKE) -C $(KERNEL_SRC) M=$(M) modules
+
+modules_install:
+	@$(MAKE) INSTALL_MOD_STRIP=1 M=$(M) -C $(KERNEL_SRC) modules_install
+
+clean:
+	$(MAKE) -C $(KERNEL_SRC) M=$(M) clean
