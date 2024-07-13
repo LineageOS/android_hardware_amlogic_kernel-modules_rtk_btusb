@@ -16,6 +16,24 @@
       "message": "I wonder if the existing makefiles would \u0027just work\u0027 using standard kbuild calls. What I set up for the nvidia out of tree repos. Triggered by appending `:kbuild` to the ext mod path.",
       "revId": "6268a99be8b816ac868cb61109e3ca7285c3d5af",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "32c00b14_7e4d4302",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-07-13T17:14:43Z",
+      "side": 1,
+      "message": "Hmmm, possibly it works. @johnsonnolen@gmail.com, please try that.",
+      "parentUuid": "f0bae5e1_36621f28",
+      "revId": "6268a99be8b816ac868cb61109e3ca7285c3d5af",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
