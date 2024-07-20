@@ -25,7 +25,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE        := rtk_btusb
 LOCAL_MODULE_SUFFIX := .ko
 LOCAL_MODULE_CLASS  := ETC
-LOCAL_MODULE_PATH   := $(TARGET_OUT_VENDOR)/lib/modules
+LOCAL_MODULE_PATH   := $(TARGET_OUT_VENDOR_DLKM)/lib/modules
 
 _rtkbtusb_intermediates := $(call intermediates-dir-for,$(LOCAL_MODULE_CLASS),$(LOCAL_MODULE))
 _rtkbtusb_ko := $(_rtkbtusb_intermediates)/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
