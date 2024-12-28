@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3e117d4_3fab2965",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2024-12-28T03:06:24Z",
+      "side": 1,
+      "message": "Just hardcode obj-m, don\u0027t need to do any of the rest of this. Verified that builds fine.",
+      "revId": "4b53a3ad96590e9a6b424907359780f31d2656b9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
