@@ -1,1 +1,1 @@
-obj-$(CONFIG_BT_RTKBTUSB)	+= rtk_btusb.o
+obj-m	+= rtk_btusb.o
